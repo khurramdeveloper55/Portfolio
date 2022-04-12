@@ -23,7 +23,7 @@ button {
   border: none;
   font-weight: 500;
   font-size: 1rem;
-  background: linear-gradient(to right, #ffbd84 0px, #ff1f8e 100%);
+  background: linear-gradient(to right, rgb(255, 189, 132) 0px, rgb(255, 31, 142) 100%);
   box-shadow: rgba(56, 0, 189, 0.2) 0px 10px 15px 0px;
 }
 button .circle {
@@ -64,7 +64,7 @@ button:hover .circle {
 header {
   width: 100%;
   height: 100vh;
-  background-color: #ffd6d6;
+  background-color: rgb(255, 214, 214);
   margin-top: -20px;
 }
 
@@ -112,7 +112,7 @@ header {
   padding-left: 65px;
 }
 .list-unstyled li a {
-  color: #0a2233;
+  color: rgb(10, 34, 51);
   font-family: Poppins, sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
@@ -126,7 +126,7 @@ header {
   bottom: -5px;
   width: 100%;
   height: 1px;
-  background-color: #2121ac;
+  background-color: rgb(33, 33, 172);
   transform: scale(0);
   transform-origin: center;
   transition: all 500ms ease;
@@ -163,14 +163,14 @@ header {
   font-size: 5.85rem;
   font-weight: 900;
   color: transparent;
-  background: linear-gradient(45deg, #ff3870 0px, #ff3870 50%, #c300c3 100%);
+  background: linear-gradient(45deg, rgb(255, 56, 112) 0px, rgb(255, 56, 112) 50%, rgb(195, 0, 195) 100%);
   -webkit-background-clip: text;
   margin-bottom: 5px;
 }
 .banner .banner-subtitle {
   font-size: 1.8rem;
   font-weight: 500;
-  color: #050748;
+  color: rgb(5, 7, 72);
   margin-bottom: 40px;
 }
 .banner button {
@@ -182,7 +182,7 @@ header {
   margin-right: 20px;
 }
 .banner .cont-button {
-  background: linear-gradient(to right, #f92c8b 0px, #b02cd6 100%);
+  background: linear-gradient(to right, rgb(249, 44, 139) 0px, rgb(176, 44, 214) 100%);
 }
 .banner .projects-button a i {
   font-size: 1.2rem;
@@ -212,13 +212,13 @@ header {
 }
 
 .about-me h1 {
-  color: #050748;
+  color: rgb(5, 7, 72);
   font-size: 2.2rem;
   font-weight: 600;
 }
 .about-me p {
   font-size: 1.2rem;
-  color: #6a6a90;
+  color: rgb(106, 106, 144);
   line-height: 30px;
 }
 .about-me .details {
@@ -236,7 +236,7 @@ header {
   width: 70%;
 }
 .about-me .details .info a {
-  color: #e60072;
+  color: rgb(230, 0, 114);
   position: relative;
 }
 .about-me .details .info a::after {
@@ -311,7 +311,7 @@ header {
   padding: 20px;
 }
 .skill-set h1 {
-  color: #050748;
+  color: rgb(5, 7, 72);
   font-weight: 600;
 }
 .skill-set span {
@@ -325,12 +325,12 @@ header {
 }
 .skill-set .lang-bar h3 {
   font-size: 15px;
-  color: #6a6a90;
+  color: rgb(106, 106, 144);
 }
 .skill-set .lang-bar span {
   font-size: 15px;
   padding-top: 17px;
-  color: #6a6a90;
+  color: rgb(106, 106, 144);
   font-weight: 500;
 }
 .skill-set .progress {
@@ -341,7 +341,7 @@ header {
 }
 .skill-set .progress-bar {
   width: 80%;
-  background-color: #f92c8b;
+  background-color: rgb(249, 44, 139);
 }
 .skill-set .prog-css {
   width: 80%;
@@ -361,12 +361,12 @@ header {
 
 .projects {
   width: 100%;
-  background: linear-gradient(#e2f3ff 0px, #fffbef 100%);
+  background: linear-gradient(rgb(226, 243, 255) 0px, rgb(255, 251, 239) 100%);
   padding-top: 70px;
   padding-bottom: 70px;
 }
 .projects h1 {
-  color: #050748;
+  color: rgb(5, 7, 72);
   padding-bottom: 30px;
   font-weight: 600;
 }
@@ -374,7 +374,7 @@ header {
 .website {
   margin-bottom: 60px;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 3.4px 2.7px -30px, rgba(0, 0, 0, 0.07) 0px 8.2px 8.9px -30px, rgba(0, 0, 0, 0.2) 0px 25px 40px -30px;
-  border: 1px solid #d4f0ff;
+  border: 1px solid rgb(212, 240, 255);
   background-color: #fff;
   border-radius: 10px;
   padding-bottom: 25px;
@@ -392,7 +392,7 @@ header {
   position: absolute;
   left: 0;
   top: -100%;
-  background: linear-gradient(45deg, #ff3870 0px, #ff3870 50%, #c300c3 100%);
+  background: linear-gradient(45deg, rgb(255, 56, 112) 0px, rgb(255, 56, 112) 50%, rgb(195, 0, 195) 100%);
   width: 100%;
   height: 300px;
   text-align: center;
@@ -452,29 +452,29 @@ header {
   padding-top: 20px;
 }
 .website .caption h3 {
-  color: #050748;
+  color: rgb(5, 7, 72);
   font-weight: 600;
 }
 .website .caption p {
   font-size: 1.3rem;
-  color: #6a6a90;
+  color: rgb(106, 106, 144);
 }
 
 .email-sect {
   padding: 80px 0;
 }
 .email-sect h1 {
-  color: #050748;
+  color: rgb(5, 7, 72);
   font-weight: 600;
   padding-bottom: 20px;
 }
 .email-sect p {
   font-size: 1.1rem;
-  color: #6a6a90;
+  color: rgb(106, 106, 144);
   font-family: "Poppins", sans-serif;
 }
 .email-sect p a {
-  color: #e60072;
+  color: rgb(230, 0, 114);
   position: relative;
   text-decoration: none;
 }
@@ -500,7 +500,7 @@ header {
 
 footer {
   padding: 60px 0;
-  border-top: 1px solid #d6c5c5;
+  border-top: 1px solid rgb(214, 197, 197);
 }
 footer a {
   text-decoration: none;
@@ -519,11 +519,11 @@ footer span {
 }
 footer .fa {
   font-size: 2.2rem;
-  color: #6a6a90;
+  color: rgb(106, 106, 144);
 }
 footer p {
   font-size: 1.2rem;
-  color: #6a6a90;
+  color: rgb(106, 106, 144);
 }
 
 @media (max-width: 1200px) {
@@ -555,7 +555,7 @@ footer p {
     display: block;
     width: 35px;
     height: 3px;
-    background-color: #0a2233;
+    background-color: rgb(10, 34, 51);
     position: absolute;
     top: 12px;
     transition: 0.3s;
@@ -567,7 +567,7 @@ footer p {
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: #0a2233;
+    background-color: rgb(10, 34, 51);
     transition: 0.3s;
   }
   .navbar-btn span::after {
@@ -577,7 +577,7 @@ footer p {
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: #0a2233;
+    background-color: rgb(10, 34, 51);
     transition: 0.3s;
   }
   .navbar-btn:focus {
@@ -652,7 +652,7 @@ footer p {
     min-width: 230px;
     max-width: 230px;
     margin-right: 7px;
-    background: #0d0d0d;
+    background: rgb(13, 13, 13);
     color: #fff;
     transition: all 0.3s;
   }
@@ -721,11 +721,21 @@ footer p {
   .about .about-me .adress p {
     font-size: 1rem;
   }
-  .about footer .fa {
+
+  .website .site-img .site-overlay a button {
+    margin-right: 2px;
+  }
+
+  .email-sect p {
+    padding: 0px 10px;
+  }
+
+  footer .fa {
     font-size: 2rem;
   }
-  .about footer p {
+  footer p {
     font-size: 1rem;
+    padding: 0px 10px;
   }
 }
 @media (max-width: 440px) {

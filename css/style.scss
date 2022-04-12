@@ -695,213 +695,225 @@ header{
 
 @media (max-width:768px){
 
-.navbar-btn {
-    width: 35px;
-    height: 30px;
-    box-shadow: none;
-    border-radius: 0;
-    padding: 0;
-    background: none;
-    position: relative;
-
-    span{
-        display: block;
+    .navbar-btn {
         width: 35px;
-        height: 3px;
-        background-color: rgb(10, 34, 51);
-        position: absolute;
-        top: 12px;
-        transition: .3s;
+        height: 30px;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        background: none;
+        position: relative;
 
-        &::before{
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: 0;
-            width: 100%;
+        span{
+            display: block;
+            width: 35px;
             height: 3px;
             background-color: rgb(10, 34, 51);
+            position: absolute;
+            top: 12px;
             transition: .3s;
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: -10px;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background-color: rgb(10, 34, 51);
+                transition: .3s;
+            }
+
+            &::after{
+                content: '';
+                position: absolute;
+                top: 10px;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background-color: rgb(10, 34, 51);
+                transition: .3s;
+            }
         }
 
-        &::after{
-            content: '';
-            position: absolute;
-            top: 10px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: rgb(10, 34, 51);
-            transition: .3s;
+        &:focus{
+            background: none;
         }
     }
 
-  &:focus{
-      background: none;
+    .navbar-btn.toggle span{
+        background: transparent;
+    }
+
+    .nav-scrolled{
+        background-color: #fff;
+        width: 100%;
+        height: 80px;
+    }
+
+    .nav-scrolled .wrapper{
+        margin: 0;
+        position: fixed;
+        display: flex;
+        align-items: stretch;
+        z-index: 9999;
+    }
+
+    .nav-brand{
+        position: absolute;
+        right: 0;
+    }
+
+    .wrapper {
+        position: fixed;
+        display: flex;
+        align-items: stretch;
+        z-index: 9999;
+    }
+
+    .wrapper{
+
+        .list-unstyled{
+            flex-direction: column;
+            text-align: center;
+            padding-top: 0;
+
+            li#for-tog{
+                display: block;
+            }
+
+            li{
+                padding: 0;
+                border-bottom: 1px solid rgba(253, 253, 253, 0.2);
+
+                a{
+
+                    &::after{
+                        height: 0;
+                    }
+                }
+            }
+
+            .cv-button{
+                width:100%;
+                height: auto;
+                background: none;
+                border: none;
+                box-shadow: none;
+                margin: 0;
+                padding: 25px 0;
+                margin-bottom: 30px;
+                border-radius: 0;
+                text-align: center;
+                color: #ff3870;
+                font-size: 1.1rem;
+                border-bottom: 1px solid rgba(253, 253, 253, 0.2);
+
+                .circle{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    #sidebar {
+    min-width: 230px;
+    max-width: 230px;
+    margin-right: 7px;
+    background: rgb(13, 13, 13);
+    color: $white-clr;
+    transition: all 0.3s;
+    }
+
+    #sidebar.active {
+    margin-left: -250px;
+    }
+
+    #sidebar ul li a {
+    padding: 20px;
+    font-size: 1.2em;
+    display: block;
+    color: $white-clr;
+    }
+
+    #sidebar ul li a:hover {
+    color: $white-clr;
+    }
+
+    #sidebar ul li.active a {
+    color: $black-clr;
+    background: $white-clr;
+    }
+
+    #content {
+    display: block;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    }
+
+
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+  .banner{
+      padding: 0px 10px;
   }
 
-}
+    .banner .banner-title{
 
-.navbar-btn.toggle span{
-    background: transparent;
-}
+        font-size: 3.8rem;
+        padding-bottom: 20px;
 
-.nav-scrolled{
-    background-color: #fff;
-    width: 100%;
-    height: 80px;
-}
+    }
 
-.nav-scrolled .wrapper{
-    margin: 0;
-    position: fixed;
-    display: flex;
-    align-items: stretch;
-    z-index: 9999;
-}
+    .banner .banner-subtitle{
+        font-size: 1.4rem;
+        margin-bottom: 40px;
+    }
 
-.nav-brand{
-    position: absolute;
-    right: 0;
-}
+    .banner button{
+        width: 150px;
+        height: 45px;
+        margin-bottom: 15px;
+    }
 
-.wrapper {
-    position: fixed;
-    display: flex;
-    align-items: stretch;
-    z-index: 9999;
-}
+    .about{
 
-.wrapper{
+        .about-me{
 
-    .list-unstyled{
-        flex-direction: column;
-        text-align: center;
-        padding-top: 0;
+            p{
+            font-size: 1rem;
+            }
 
-        li#for-tog{
-            display: block;
-        }
+            .details{
 
-        li{
-            padding: 0;
-            border-bottom: 1px solid rgba(253, 253, 253, 0.2);
+                p{
+                font-size: 1rem;
+                }
+            }
 
-            a{
+            .adress{
 
-                &::after{
-                    height: 0;
+                p{
+                font-size: 1rem;
                 }
             }
         }
 
-        .cv-button{
-            width:100%;
-            height: auto;
-            background: none;
-            border: none;
-            box-shadow: none;
-            margin: 0;
-            padding: 25px 0;
-            margin-bottom: 30px;
-            border-radius: 0;
-            text-align: center;
-            color: #ff3870;
-            font-size: 1.1rem;
-            border-bottom: 1px solid rgba(253, 253, 253, 0.2);
-
-            .circle{
-                display: none;
-            }
-        }
-    }
-}
-
-#sidebar {
-  min-width: 230px;
-  max-width: 230px;
-  margin-right: 7px;
-  background: rgb(13, 13, 13);
-  color: $white-clr;
-  transition: all 0.3s;
-}
-
-#sidebar.active {
-  margin-left: -250px;
-}
-
-#sidebar ul li a {
-  padding: 20px;
-  font-size: 1.2em;
-  display: block;
-  color: $white-clr;
-}
-
-#sidebar ul li a:hover {
-  color: $white-clr;
-}
-
-#sidebar ul li.active a {
-  color: $black-clr;
-  background: $white-clr;
-}
-
-#content {
-  display: block;
-  padding: 20px;
-  min-height: 100vh;
-  transition: all 0.3s;
-}
-
-
-  #sidebar {
-    margin-left: -250px;
-  }
-  #sidebar.active {
-    margin-left: 0;
-  }
-
-  .banner{
-    padding: 0px 10px;
     }
 
-.banner .banner-title{
-
-    font-size: 3.8rem;
-    padding-bottom: 20px;
+    .website .site-img .site-overlay a button{
+        margin-right: 2px;
     }
 
-    .banner .banner-subtitle{
-    font-size: 1.4rem;
-    margin-bottom: 40px;
-    }
-
-    .banner button{
-    width: 150px;
-    height: 45px;
-    margin-bottom: 15px;
-    }
-
-  .about{
-
-    .about-me{
-
+    .email-sect{
         p{
-            font-size: 1rem;
-        }
-
-        .details{
-
-            p{
-                font-size: 1rem;
-            }
-        }
-
-        .adress{
-
-            p{
-                font-size: 1rem;
-            }
+            padding: 0px 10px;
         }
     }
 
@@ -910,14 +922,15 @@ header{
         .fa{
             font-size: 2rem;
         }
-        
+
         p{
             font-size: 1rem;
+            padding: 0px 10px;
         }
-    }
     }
 
 }
+
 
 @media (max-width:440px){
 
