@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>{{title}}</title>
+        <meta name="description" content="{{description}}" />
+
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+
+        <!-- Swiper Bundle Css -->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+        <!-- Favicon -->
+        <link rel="icon" href="assets/img/favicon.png" />
+
+        <!-- Unicons -->
+        <link
+            rel="stylesheet"
+            href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+        />
+
+        <!-- Aos Animation -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga = function () {
+                ga.q.push(arguments);
+            };
+            ga.q = [];
+            ga.l = +new Date();
+            ga("create", "UA-XXXXX-Y", "auto");
+            ga("set", "anonymizeIp", true);
+            ga("set", "transport", "beacon");
+            ga("send", "pageview");
+        </script>
+    </head>
+    <body>
+        <!-- Navbar Source -->
+        {{ fileInclude 'src/assets/partials/navbar.html' }}
+    </body>
+</html>
