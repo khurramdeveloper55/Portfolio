@@ -1,5 +1,7 @@
 /* Header Height */
+$header-height: 3.5rem;
 
+/* CSS Variables */
 :root {
     --hue-color: 250; /* Set your default hue value here */
     --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -17,14 +19,10 @@
     --nav-color: #fff;
 }
 
-$header-height: 3.5rem;
-
-// Color Variables
+/* Sass Variables */
 
 /* HSL Colour Mode */
-
 $hue-color: 250;
-
 $first-color: hsl($hue-color, 69%, 61%);
 $first-color-second: hsl($hue-color, 69%, 61%);
 $first-color-alt: hsl($hue-color, 57%, 53%);
@@ -35,38 +33,12 @@ $text-color-light: hsl($hue-color, 8%, 65%);
 $input-color: hsl($hue-color, 70%, 96%);
 $body-input: hsl($hue-color, 60%, 99%);
 
-// Primary
+/* Primary Colors */
 $white: #fff !default;
 $black: #000000 !default;
-$primary: #30782f !default;
-$prim-blue: #0c2392 !default;
-$prim-brown: #200001 !default;
-$prim-grey: #656565 !default;
-$prim-beige: #e8c3ab !default;
-// Secondary
-$sec-brown: #200001 !default;
-$sec-beige: #f0e2d8 !default;
-$sec-grey: #e6e7e8 !default;
-$sec-dark-silver: #cdd0df !default;
-$yellow: #edec2f !default;
-$red: #df0404 !default;
-$light-yellow: #f7f7d1 !default;
-//body bg color
-$beige: #fbf7f4 !default;
-$light-grey: #fbfbfb !default;
-$dark-grey: #f7f7f8 !default;
-$light-silver: #f5f6fa !default;
 $body-color: $white !default;
-//table border color
-$table-grey: #d2d3e1 !default;
-//card-large
-$card-light-blue: #0a1f83 !default;
-$card-dark-blue: #100e53 !default;
 
-//body bg color
-$body-color: hsl(250, 60%, 99%);
-
-//font family
+/* Font Family */
 
 $body-font: "Poppins", sans-serif;
 $font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -75,7 +47,7 @@ $font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 
 $animation-duration: 200ms;
 
-//font size and line height values
+/* Font Sizes & Line Height Values */
 $breakpoints: (
     sm: 576px,
     md: 768px,

@@ -1,3 +1,4 @@
+// Strict Mode
 (function ($) {
     "use strict"; // Start of use strict
 
@@ -31,22 +32,6 @@ function linkAction() {
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
-// Swiper JS
-let swiper = new Swiper(".portfolio__container", {
-    cssMode: true,
-    loop: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        // el: ".swiper-pagination",
-        clickable: true,
-    },
-    mousewheel: true,
-    keyboard: true,
-});
-
 // Navigation Scroll
 document.addEventListener("scroll", () => {
     const header = document.querySelector("header");
@@ -55,27 +40,6 @@ document.addEventListener("scroll", () => {
     } else {
         header.classList.remove("scroll-header");
     }
-});
-
-// Button Style
-$(".button_su_inner").mouseenter(function (e) {
-    var parentOffset = $(this).offset();
-
-    var relX = e.pageX - parentOffset.left;
-    var relY = e.pageY - parentOffset.top;
-    $(this).prev(".su_button_circle").css({ left: relX, top: relY });
-    $(this).prev(".su_button_circle").removeClass("desplode-circle");
-    $(this).prev(".su_button_circle").addClass("explode-circle");
-});
-
-$(".button_su_inner").mouseleave(function (e) {
-    var parentOffset = $(this).offset();
-
-    var relX = e.pageX - parentOffset.left;
-    var relY = e.pageY - parentOffset.top;
-    $(this).prev(".su_button_circle").css({ left: relX, top: relY });
-    $(this).prev(".su_button_circle").removeClass("explode-circle");
-    $(this).prev(".su_button_circle").addClass("desplode-circle");
 });
 
 // Scroll Section Active Link
@@ -101,21 +65,28 @@ function scrollActive() {
     });
 }
 
-window.addEventListener("scroll", scrollActive);
+// Button Style
+$(".button_su_inner").mouseenter(function (e) {
+    var parentOffset = $(this).offset();
 
-// // Scroll Up
-const toTop = document.querySelector(".scrollup");
+    var relX = e.pageX - parentOffset.left;
+    var relY = e.pageY - parentOffset.top;
+    $(this).prev(".su_button_circle").css({ left: relX, top: relY });
+    $(this).prev(".su_button_circle").removeClass("desplode-circle");
+    $(this).prev(".su_button_circle").addClass("explode-circle");
+});
 
-window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 300) {
-        toTop.classList.add("appear");
-    } else {
-        toTop.classList.remove("appear");
-    }
+$(".button_su_inner").mouseleave(function (e) {
+    var parentOffset = $(this).offset();
+
+    var relX = e.pageX - parentOffset.left;
+    var relY = e.pageY - parentOffset.top;
+    $(this).prev(".su_button_circle").css({ left: relX, top: relY });
+    $(this).prev(".su_button_circle").removeClass("explode-circle");
+    $(this).prev(".su_button_circle").addClass("desplode-circle");
 });
 
 // Dark Theme
-
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
 const iconTheme = "uil-sun";
@@ -152,4 +123,98 @@ themeButton.addEventListener("click", () => {
     // We save the theme and the current icon that the user chose
     localStorage.setItem("selected-theme", getCurrentTheme());
     localStorage.setItem("selected-icon", getCurrentIcon());
+});
+
+// Portfolio Carousel
+let swiper = new Swiper(".portfolio__container", {
+    cssMode: true,
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        // el: ".swiper-pagination",
+        clickable: true,
+    },
+    mousewheel: true,
+    keyboard: true,
+});
+
+window.addEventListener("scroll", scrollActive);
+
+// Skills Section Animation
+$(document).ready(function () {
+    // Delay in milliseconds before starting the animation
+    var animationDelay = 2000;
+
+    // Animate HTML5 skill percentage after a delay
+    setTimeout(function () {
+        $(".skills__html").animate({ width: "90%" }, 2000);
+    }, animationDelay);
+
+    // Animate BOOTSTRAP skill percentage after a delay
+    setTimeout(function () {
+        $(".skills__bootstrap").animate({ width: "85%" }, 2000);
+    }, animationDelay + 200);
+
+    // Animate jQuery skill percentage after a delay
+    setTimeout(function () {
+        $(".skills__jquery").animate({ width: "40%" }, 2000);
+    }, animationDelay + 400);
+
+    // Animate CSS3 skill percentage after a delay
+    setTimeout(function () {
+        $(".skills__css3").animate({ width: "85%" }, 2000);
+    }, animationDelay + 600);
+
+    // Animate JS skill percentage after a delay
+    setTimeout(function () {
+        $(".skills__js").animate({ width: "45%" }, 2000);
+    }, animationDelay + 800);
+
+    // Animate SASS skill percentage after a delay
+    setTimeout(function () {
+        $(".skills__sass").animate({ width: "50%" }, 2000);
+    }, animationDelay + 1000);
+});
+
+// Form Validation
+jQuery("#form-valid").validate({
+    rules: {
+        name: "required",
+        email: {
+            required: true,
+            email: true,
+        },
+        subject: {
+            required: true,
+            minlength: 10,
+        },
+    },
+    messages: {
+        name: "Please enter your name",
+        email: {
+            required: "Please enter your email",
+            email: "Please enter valid email",
+        },
+        subject: {
+            required: "Please enter your subject",
+            minlength: "Must be 10 characters long",
+        },
+    },
+    submitHandler: function (form) {
+        form.submit();
+    },
+});
+
+// // Scroll Up
+const toTop = document.querySelector(".scrollup");
+
+window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+        toTop.classList.add("appear");
+    } else {
+        toTop.classList.remove("appear");
+    }
 });

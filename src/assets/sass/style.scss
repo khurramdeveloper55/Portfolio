@@ -35,6 +35,12 @@ html {
     scroll-padding-top: 7rem;
 }
 
+.max-container {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -191,7 +197,7 @@ img {
     opacity: 0.8;
     padding: 0 0.3rem;
     border-radius: 0.4rem;
-    z-index: 9999999;
+    z-index: 999;
     transition: 0.5s;
 
     &:hover {
@@ -395,25 +401,28 @@ header.scroll-header {
     &__percentage {
         display: block;
         background-color: var(--first-color);
+        position: relative;
+        width: 0;
+        /* animation: fillBars 1.5s 1; */
     }
 
     &__html {
-        width: 90%;
+        max-width: 90%;
     }
     &__bootstrap {
-        width: 85%;
+        max-width: 85%;
     }
     &__jquery {
-        width: 40%;
+        max-width: 40%;
     }
     &__css3 {
-        width: 85%;
+        max-width: 85%;
     }
     &__js {
-        width: 45%;
+        max-width: 45%;
     }
     &__sass {
-        width: 50%;
+        max-width: 50%;
     }
 }
 
@@ -550,6 +559,9 @@ header.scroll-header {
         font-size: $normal-font-size;
         color: var(--title-color);
     }
+    label.error {
+        color: red;
+    }
     &__input {
         width: 100%;
         background-color: var(--input-color);
@@ -570,16 +582,6 @@ header.scroll-header {
 /* Contact Section Ends */
 
 /* Media Query Starts */
-
-@media only screen and (min-width: 1450px) {
-    .container,
-    .nav {
-        max-width: 75%;
-    }
-    .contact .info .container {
-        max-width: 1200px !important;
-    }
-}
 
 @media only screen and (max-width: 1300px) {
     .container,
@@ -662,6 +664,11 @@ header.scroll-header {
 }
 
 @media only screen and (max-width: 767px) {
+    header {
+        background-color: var(--nav-color);
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+        bottom: 0;
+    }
     .button_su_inner {
         font-size: 0.9rem;
         padding: 0.6rem 0.92rem;
@@ -683,11 +690,15 @@ header.scroll-header {
         align-items: center;
     }
 
+    .nav__toggle.active {
+        display: block;
+    }
+
     .nav__close {
         display: block;
         position: absolute;
         right: 1.3rem;
-        bottom: 0.5rem;
+        top: 0.5rem;
         font-size: 1.5rem;
         cursor: pointer;
         color: var(--first-color);
@@ -701,6 +712,7 @@ header.scroll-header {
 
     .show-menu {
         bottom: 0;
+        z-index: 9999999;
     }
 
     .nav {
@@ -711,6 +723,7 @@ header.scroll-header {
 
         &__list {
             justify-content: center;
+            margin-top: 25px;
         }
         &__item {
             padding-right: 2.5rem;
@@ -721,9 +734,6 @@ header.scroll-header {
         a {
             display: inline-block;
             text-align: center;
-        }
-        i {
-            display: block;
         }
     }
 
@@ -917,9 +927,3 @@ header.scroll-header {
 }
 
 /* Media Query Ends */
-
-@keyframes fillProgressBar {
-    0% {
-        width: 0;
-    }
-}
