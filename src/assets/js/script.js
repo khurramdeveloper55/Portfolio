@@ -3,8 +3,13 @@
     "use strict"; // Start of use strict
 
     $(function () {
-        // Skills Section Animation
+        // Aos animations
+        AOS.init({
+            offset: 250,
+            duration: 800,
+        });
 
+        // Skills Section Animation
         const skillsSection = $("#skill");
         const skills = skillsSection.find(".skills__data");
         const animationDelay = 2000;
