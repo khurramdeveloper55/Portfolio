@@ -3,7 +3,38 @@
     "use strict"; // Start of use strict
 
     $(function () {
-        console.log("script here");
+        // Skills Section Animation
+
+        const skillsSection = $("#skill");
+        const skills = skillsSection.find(".skills__data");
+        const animationDelay = 2000;
+        let skillsAnimated = false;
+
+        $(window).on("scroll", function () {
+            if (!skillsAnimated && isElementInView(skillsSection)) {
+                skills.each(function () {
+                    const skillNumber = $(this).find(".skills__number");
+                    const skillText = parseInt(skillNumber.text());
+                    const skillPercent = $(this).find(".skills__percentage");
+
+                    skillPercent.animate(
+                        { width: skillText + "%" },
+                        animationDelay
+                    );
+                });
+
+                skillsAnimated = true;
+            }
+        });
+
+        // Helper function to check if an element is in the viewport
+        function isElementInView(element) {
+            const windowHeight = $(window).height();
+            const elementOffset = element.offset().top + 300;
+            const scrollPos = $(window).scrollTop();
+
+            return elementOffset < scrollPos + windowHeight;
+        }
     });
 })(jQuery); // End of use strict
 
@@ -142,42 +173,6 @@ let swiper = new Swiper(".portfolio__container", {
 });
 
 window.addEventListener("scroll", scrollActive);
-
-// Skills Section Animation
-$(document).ready(function () {
-    // Delay in milliseconds before starting the animation
-    var animationDelay = 2000;
-
-    // Animate HTML5 skill percentage after a delay
-    setTimeout(function () {
-        $(".skills__html").animate({ width: "90%" }, 2000);
-    }, animationDelay);
-
-    // Animate BOOTSTRAP skill percentage after a delay
-    setTimeout(function () {
-        $(".skills__bootstrap").animate({ width: "85%" }, 2000);
-    }, animationDelay + 200);
-
-    // Animate jQuery skill percentage after a delay
-    setTimeout(function () {
-        $(".skills__jquery").animate({ width: "40%" }, 2000);
-    }, animationDelay + 400);
-
-    // Animate CSS3 skill percentage after a delay
-    setTimeout(function () {
-        $(".skills__css3").animate({ width: "85%" }, 2000);
-    }, animationDelay + 600);
-
-    // Animate JS skill percentage after a delay
-    setTimeout(function () {
-        $(".skills__js").animate({ width: "45%" }, 2000);
-    }, animationDelay + 800);
-
-    // Animate SASS skill percentage after a delay
-    setTimeout(function () {
-        $(".skills__sass").animate({ width: "50%" }, 2000);
-    }, animationDelay + 1000);
-});
 
 // Form Validation
 jQuery("#form-valid").validate({
