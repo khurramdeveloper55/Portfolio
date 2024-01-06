@@ -366,18 +366,24 @@ header.scroll-header {
     }
 
     &--jquery-percentage {
-        width: 50%;
+        width: 60%;
     }
 
     &--css3-percentage {
         width: 90%;
     }
     &--js-percentage {
-        width: 55%;
+        width: 65%;
     }
 
     &--sass-percentage {
-        width: 65%;
+        width: 80%;
+    }
+    &--strapi-percentage {
+        width: 50%;
+    }
+    &--wordpress-percentage {
+        width: 50%;
     }
     &__bar,
     &__percentage {
@@ -419,16 +425,22 @@ header.scroll-header {
         max-width: 90%;
     }
     &__jquery {
-        max-width: 50%;
+        max-width: 60%;
     }
     &__css3 {
         max-width: 90%;
     }
     &__js {
-        max-width: 55%;
+        max-width: 65%;
     }
     &__sass {
         max-width: 80%;
+    }
+    &__strapi {
+        max-width: 50%;
+    }
+    &__wordpress {
+        max-width: 50%;
     }
 }
 
